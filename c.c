@@ -5,23 +5,8 @@
 #include <errno.h>
 #include <dirent.h>
 
-// Takes a slow and inefficient approach because I was too lazy to fix it
-// May be better in the future
+// Laziness redeemed
 void printDirInfo(char *dirloc) {
-
-  //Print size
-
-  
-  /*
-  while (curr = readdir(dir)){ // Yes it does the same loop thrice
-    struct stat ap;
-    stat((*curr).d_name, &ap);
-    if ((*curr).d_type == 8)
-      sum += ap.st_size;
-  }
-  */
-
- 
   
   struct dirent *curr;
   DIR *dir = opendir(dirloc);
